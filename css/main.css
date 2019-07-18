@@ -7,11 +7,16 @@ html, body{
 }
 
 #profile-img{
-  max-width: 250px;
-  width: 80%;
+  width: 200px;
+  max-width: 80%;
   margin: auto;
   height: auto;
   border-radius: 4%;
+}
+@media (max-width: 768px) {
+  #profile-img{
+    width: 150px;
+  }
 }
 
 .navbar, .container, .portfolio-container{
