@@ -16,6 +16,7 @@ html, body{
 @media (max-width: 768px) {
   #profile-img{
     width: 120px;
+    border-radius: 50%;
   }
 }
 
