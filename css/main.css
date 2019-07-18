@@ -2,6 +2,7 @@ html, body{
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   background: #f4f4f4;
   margin: 0;
+  scroll-behavior: smooth;
   /* this line makes body extended
   100% despite default */
 }
@@ -139,6 +140,10 @@ header{
   background: #edf0f9;
   padding: 4rem 1rem;
 }
+#education {
+  background: #edf0f9;
+  padding: 4rem 1rem;
+}
 .myvideo{
   /* max-width: 70%; */
 }
@@ -225,7 +230,7 @@ header{
   display: flex;
 }
 
-.contact{
+#contact{
     background-color: #4f4f4f;
     padding: 30px 0;
 }
@@ -289,7 +294,7 @@ header{
   font-size: 15px;
   margin-bottom: 5px;
 }
-.myInterest{
+#myInterest{
   background: #fff;
 }
 .interestContainer{
@@ -311,7 +316,7 @@ header{
       text-transform: uppercase;
 }
 /* aboutMe section */
-.aboutMe{
+#aboutMe{
   background: #fff;
 }
 .key-1{
