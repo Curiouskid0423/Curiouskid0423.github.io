@@ -15,7 +15,7 @@ html, body{
 }
 @media (max-width: 768px) {
   #profile-img{
-    width: 150px;
+    width: 120px;
   }
 }
 
