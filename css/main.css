@@ -294,7 +294,7 @@ header{
   font-size: 15px;
   margin-bottom: 5px;
 }
-#myInterest{
+.myInterest{
   background: #fff;
 }
 .interestContainer{
@@ -316,7 +316,7 @@ header{
       text-transform: uppercase;
 }
 /* aboutMe section */
-#aboutMe{
+.aboutMe{
   background: #fff;
 }
 .key-1{
