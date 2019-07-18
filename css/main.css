@@ -15,7 +15,7 @@ html, body{
 }
 @media (max-width: 768px) {
   #profile-img{
-    width: 120px;
+    width: 150px;
     border-radius: 50%;
   }
 }
@@ -29,11 +29,19 @@ html, body{
   display: flex;
   padding: 80px 0;
 }
+.abt-intro{
+  display: none;
+}
 @media (max-width: 768px) {
   .abtContainer{
     display: block;
+    padding: 20px 0;
   }
-
+  .abt-intro{
+    display: block;
+    padding-top: 2rem;
+    text-align: center;
+  }
 }
 .navbar{
   display: flex;
