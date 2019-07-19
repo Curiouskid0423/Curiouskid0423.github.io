@@ -139,6 +139,19 @@ header{
   opacity: 1;
   right: 0;
 }
+.toTopButton{
+  position: fixed;
+  z-index: 10;
+  transform: rotate(-90deg);
+  transition: .3s ease-in-out;
+  height: 50px;
+  bottom: 2rem;
+  right: 2rem;
+}
+.toTopButton:hover{
+  transform: rotate(-90deg) scale(1.05);
+  cursor: pointer;
+}
 
 /* intro section */
 .intro {
