@@ -6,7 +6,6 @@ html, body{
   /* this line makes body extended
   100% despite default */
 }
-
 #profile-img{
   width: 200px;
   max-width: 80%;
@@ -61,6 +60,11 @@ html, body{
   text-decoration: none;
   font-size: 18px;
 }
+/* Specifically for resume button */
+a{
+  color:inherit;
+}
+
 .brand{
   font-size: 24px;
   align-items: center;
@@ -70,10 +74,11 @@ html, body{
 .nav-link{
   padding: 10px 12px;
 }
-.brand, .nav-link, a{
+.brand, .nav-link{
   text-transform: uppercase;
   color: #303137;
 }
+
 .dropdownLink{
     display: none;
 }
@@ -275,6 +280,7 @@ header{
     color: #9A9A9A;
     padding-bottom: 15px;
     margin: 0 auto;
+    text-align: center;
 }
 
 @media (max-width: 768px) {
