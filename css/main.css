@@ -51,7 +51,7 @@ html, body{
     padding-top: 2rem;
     text-align: center;
   }
-  .key-1, .key-2, .key-3{
+  .key{
     margin: 2rem auto;
   }
 }
@@ -414,7 +414,8 @@ header{
   font-weight: 300;
 }
 .abt-icon-wrapper{
-  padding: 1rem 0;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
 }
 .abt-icon{
   max-width: 120px;
