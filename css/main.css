@@ -1,17 +1,24 @@
 html, body{
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   background: #f4f4f4;
-  margin: 0;
   scroll-behavior: smooth;
+  margin: 0;
+  width: 100%;
   /* this line makes body extended
   100% despite default */
 }
 #profile-img{
-  width: 200px;
+  width: 180px;
   max-width: 80%;
   margin: auto;
   height: auto;
-  border-radius: 4%;
+  border-radius: 50%;
+  border: 1px solid rgb(76, 136, 185);
+}
+@media (max-width: 1024px) {
+  #profile-img{
+    width: 150px;
+  }
 }
 @media (max-width: 768px) {
   #profile-img{
@@ -20,13 +27,14 @@ html, body{
   }
 }
 
-.navbar, .container, .portfolio-container{
+.container, .portfolio-container{
   max-width: 1140px;
   width: 100%;
   margin: 0 auto;
 }
 .abtContainer{
   display: flex;
+  justify-content: space-around;
   padding: 80px 0;
 }
 .abt-intro{
@@ -34,7 +42,8 @@ html, body{
 }
 @media (max-width: 768px) {
   .abtContainer{
-    display: block;
+    display: flex;
+    flex-direction: column;
     padding: 20px 0;
   }
   .abt-intro{
@@ -42,37 +51,57 @@ html, body{
     padding-top: 2rem;
     text-align: center;
   }
+  .key-1, .key-2, .key-3{
+    margin: 2rem auto;
+  }
 }
 .navbar{
+  width: 100%;
+  margin: 0 auto;
   display: flex;
-  /* padding: 10px; */
+  position: fixed;
+  background: rgba(240, 248, 255, 0.7);
+  box-shadow: 0 -8px 20px 5px rgba(223, 223, 223, 0.5);
   justify-content: space-between;
+}
+.span-nav{
+  flex: 1;
+}
+@media (max-width: 768px) {
+  .span-nav{
+    display: none;
+  }
 }
 .top-nav{
   display: flex;
+  flex: 3;
   list-style: none;
   align-items: center;
   margin: 0;
   padding: 0;
 }
-.top-nav, .nav-link, a{
-  /* padding: 10px 12px; */
+.top-nav, .nav-link{
   text-decoration: none;
   font-size: 18px;
 }
-/* Specifically for resume button */
 a{
+  text-decoration: none;
+  font-size: 18px;
   color:inherit;
 }
-
+/* Specifically for resume button */
 .brand{
   font-size: 24px;
   align-items: center;
-  padding-top: 10px;
-  padding-left: 10px;
+  padding: 10px;
+  flex: 2;
 }
 .nav-link{
-  padding: 10px 12px;
+  padding: 10px 9px;
+  transition: 0.2s ease-in-out;
+}
+.nav-link:hover{
+  color: steelblue;
 }
 .brand, .nav-link{
   text-transform: uppercase;
@@ -88,15 +117,30 @@ header{
   justify-content: center;
   /* height: 100vh; */
 }
+.banner{
+  background-image: url("../source/banner-unsplash-w40.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+
 .headershot-wrapper{
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding: 6rem 0;
+  padding-top: 10rem;
+  padding-bottom: 6rem;
 }
+.headline-name{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 36px;
+}
+
 .headline-ps {
   font-weight: 400;
-  margin: -1rem;
+  margin: -1rem 0;
   line-height: 1.5;
 }
 .headline-ps-sub {
@@ -106,7 +150,7 @@ header{
 }
 /* resume button */
 .resumeButton {
-  background: rgba(208, 214, 232, .5);
+  background: rgba(208, 214, 232, 0.8);
   border-radius: 16px;
   border: none;
   font-size: 1.1rem;
@@ -124,7 +168,7 @@ header{
 .resumeButton:hover,
 .resumeButton:focus,
 .resumeButton:active {
-  background: rgba(102, 182, 211, .7);
+  background: rgba(102, 182, 211, .8);
   color: #fff;
   padding-right: 1.2rem; /*for animation*/
   transition: all 0.35s ease-in;
@@ -314,7 +358,10 @@ header{
   margin-bottom: 5px;
 }
 .myInterest{
-  background: #fff;
+  background-image: url("../source/interest-unsplashw50.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 .interestContainer{
   display: flex;
@@ -338,24 +385,28 @@ header{
 .aboutMe{
   background: #fff;
 }
-.key-1{
+.key{
   flex: 1;
   justify-content: center;
   text-align: center;
+  padding-bottom: 25px;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  max-width: 250px;
+  transition: 0.5s ease-in-out;
 }
-.key-2{
-  flex: 1;
-  justify-content: center;
-  text-align: center;
+.key:hover{
+  transform: scale(1.05);
 }
-.key-3{
-  flex: 1;
-  justify-content: center;
-  text-align: center;
-}
+
 .abt-buzzword{
   font-weight: 400;
   letter-spacing: 2px;
+  background-color: rgba(35, 147, 197, 0.7);
+  color: white;
+  border-radius: 10px 10px 0 0;
+  padding: 10px 0;
+  margin-top: 0;
 }
 .abt-info{
   max-width: 70%;
@@ -363,13 +414,11 @@ header{
   font-weight: 300;
 }
 .abt-icon-wrapper{
-  padding-top: 1rem;
+  padding: 1rem 0;
 }
 .abt-icon{
   max-width: 120px;
-  width: 100%;
-  border-radius: 50%;
-  box-shadow: 0 2px 15px rgba(0,0,0, .1)
+  width: 30%;
 }
 
 /* portfolio */
@@ -437,39 +486,46 @@ header{
     transform: scale(1.05);
 }
 
+
 /* MEDIA QUERY section */
 @media (max-width: 768px) {
+  .navbar{
+    background: rgba(240, 248, 255, 1);
+  }
   ul.top-nav{
     align-items: flex-end;
     padding-right: 0;
   }
   ul.top-nav li a.nav-link{
     display: none;
-    line-height: 1.8;
   }
   ul.top-nav li.dropdownLink{
     display: block;
     position: absolute;
-    top: 8px;
+    top: 6px;
     right: 20px;
-  }
-  /* reposition the icon after onclick */
-  ul.top-nav.responsive li.dropdownLink{
-    position: absolute;
-    top: 8px;
-    right: 20px;
+
   }
   ul.top-nav.responsive{
     flex-direction: column;
   }
-  /* responsie nav items */
-  ul.top-nav.responsive li{
-    position: relative;
-    top: 34px;
-    right: 30px;
+  /* responsive nav items */
+  #first-navitem{
+    margin-top: 40px;
   }
+  ul.top-nav.responsive a.nav-link{
+    position: relative;
+    right: 13px;
+    text-align: right;
+    padding: 10px;
+  }
+  /* from display none to block */
   ul.top-nav.responsive li a{
     display: block;
   }
-
+}
+@media (max-width: 320px) {
+  ul.top-nav.responsive a.nav-link{
+    right: 45px;
+  }
 }
