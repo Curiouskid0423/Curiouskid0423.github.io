@@ -7,32 +7,38 @@
     <title>Kevin Li | 黎聿騰</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/main.css">
+    <!-- google font -->
+<link href="https://fonts.googleapis.com/css?family=Montserrat|Noto+Sans+TC&display=swap" rel="stylesheet">
   </head>
   <body>
-    <nav class="navbar">
-      <!-- navbar brand -->
-      <div class="brand">Kev<span style="color: #66B6D3;">Portfolio</span></div>
-      <!-- navbar items -->
-      <ul class="top-nav" id="navbar-toggle">
-        <li><a class="nav-link" href="#aboutMe" onclick="toggleDropdown()">Intro</a></li>
-        <li><a class="nav-link" href="#myInterest" onclick="toggleDropdown()">Recognitions</a></li>
-        <li><a class="nav-link" href="#education" onclick="toggleDropdown()">Experience</a></li>
-        <li><a class="nav-link" href="#portfolio" onclick="toggleDropdown()">Projects</a></li>
-        <li><a class="nav-link" href="#contact" onclick="toggleDropdown()">Contact</a></li>
-        <li class="dropdownLink"><a href="#" style="font-size: 24px" onclick="toggleDropdown()"> &#9776;</a></li>
-      </ul>
-    </nav>
-  <!-- Section 1 -->
-  <header>
-    <div class="headershot-wrapper">
-      <img id="profile-img" src="source/PROFILE.jpg" alt="profile image">
-      <h1 style="font-weight: 450;">Kevin Li</h1>
-      <h4 class="headline-ps">UC Berkeley EECS '23  |  Full-stack Developer</h4>
-      <h4 class="headline-ps-sub"> A coder, an imagineer, maybe a poet</h4>
-      <button type="button" name="button "class="resumeButton"><span><a href="https://www.scribd.com/document/418683110/Resume"
-        target="_blank">My Resume</a></span></button>
-   </div>
-  </header>
+    <section class="banner">
+      <nav class="navbar">
+        <div class="span-nav"></div>
+        <!-- navbar brand -->
+        <div class="brand">Kev<span style="color: #66B6D3;">Portfolio</span></div>
+        <!-- navbar items -->
+        <ul class="top-nav" id="navbar-toggle">
+          <li><a class="nav-link" id="first-navitem" href="#aboutMe" onclick="toggleDropdown()">Intro</a></li>
+          <li><a class="nav-link" href="#myInterest" onclick="toggleDropdown()">Recognitions</a></li>
+          <li><a class="nav-link" href="#education" onclick="toggleDropdown()">Experience</a></li>
+          <li><a class="nav-link" href="#portfolio" onclick="toggleDropdown()">Projects</a></li>
+          <li><a class="nav-link" href="#contact" onclick="toggleDropdown()">Contact</a></li>
+          <li class="dropdownLink"><a href="#" style="font-size: 24px" onclick="toggleDropdown()"> &#9776;</a></li>
+        </ul>
+        <div class="span-nav"></div>
+      </nav>
+    <!-- Section 1 -->
+    <header>
+      <div class="headershot-wrapper">
+        <img id="profile-img" src="source/PROFILE.jpg" alt="profile image">
+        <h1 class="headline-name">Kevin Li</h1>
+        <h4 class="headline-ps">UC Berkeley EECS '23  |  Full-stack Developer</h4>
+        <h4 class="headline-ps-sub"> Self-Learning. Hackathon Organizing. Bioengineering</h4>
+        <button type="button" name="button "class="resumeButton"><span><a href="https://www.scribd.com/document/418683110/Resume"
+          target="_blank">My Resume</a></span></button>
+     </div>
+    </header>
+    </section>
   <!-- interfiller: keywords about me-->
   <a href="#"><img class="toTopButton" src="source/play-button.png" alt="To Page Top"></a>
   <section id="aboutMe" class="aboutMe">
@@ -43,29 +49,29 @@
         <h4 class="edu-exp-header">About ME</h4>
     </div>
     <div class="container abtContainer">
-        <div class="key-1">
-          <div class="abt-icon-wrapper">
-            <img class="abt-icon" src="source/coder.png" alt="hackathon pic">
-          </div>
+        <div class="key">
           <h3 class="abt-buzzword">Self-learner</h3>
+          <div class="abt-icon-wrapper">
+            <img class="abt-icon" src="source/share.png" alt="hackathon pic">
+          </div>
           <h4 class="abt-info">am dapibus convallis felis, in euismod mi vulputate nec. Maecenas varius eleifend
           leo, nec pharetra leo</h4>
         </div>
 
-        <div class="key-2">
+        <div class="key">
+          <h3 class="abt-buzzword">Coder</h3>
           <div class="abt-icon-wrapper">
-            <img class="abt-icon" src="source/iGEM-icon.png" alt="icon graph">
+            <img class="abt-icon" src="source/programming.png" alt="icon graph">
           </div>
-          <h3 class="abt-buzzword">iGEMer</h3>
           <h4 class="abt-info">am dapibus convallis felis, in euismod mi vulputate nec. Maecenas varius eleifend
           leo, nec pharetra leo</h4>
         </div>
 
-        <div class="key-3">
+        <div class="key">
+          <h3 class="abt-buzzword">Enterpreneurship</h3>
           <div class="abt-icon-wrapper">
-            <img class="abt-icon" src="source/hackathon.jpg" alt="icon graph">
+            <img class="abt-icon" src="source/challenges.png" alt="icon graph">
           </div>
-          <h3 class="abt-buzzword">Coder / Leadership</h3>
           <h4 class="abt-info">am dapibus convallis felis, in euismod mi vulputate nec. Maecenas varius eleifend
           leo, nec pharetra leo</h4>
         </div>
