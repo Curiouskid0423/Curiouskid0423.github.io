@@ -13,7 +13,7 @@ html, body{
   margin: auto;
   height: auto;
   border-radius: 50%;
-  border: 1px solid rgb(76, 136, 185);
+  border: 2px solid #3092ef;
 }
 @media (max-width: 1024px) {
   #profile-img{
@@ -38,9 +38,9 @@ html, body{
   padding: 80px 0;
 }
 .abt-intro{
-  display: none;
+  display: block;
 }
-@media (max-width: 768px) {
+@media (max-width: 960px) {
   .abtContainer{
     display: flex;
     flex-direction: column;
@@ -60,17 +60,13 @@ html, body{
   margin: 0 auto;
   display: flex;
   position: fixed;
+  z-index: 2;
   background: rgba(240, 248, 255, 0.7);
   box-shadow: 0 -8px 20px 5px rgba(223, 223, 223, 0.5);
   justify-content: space-between;
 }
 .span-nav{
   flex: 1;
-}
-@media (max-width: 768px) {
-  .span-nav{
-    display: none;
-  }
 }
 .top-nav{
   display: flex;
@@ -91,21 +87,30 @@ a{
 }
 /* Specifically for resume button */
 .brand{
-  font-size: 24px;
   align-items: center;
-  padding: 10px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 8px;
   flex: 2;
+  /* span-nav: 1 | brand: 2 | nav-items: 3 | span-nav: 1 */
+}
+.brand img{
+  width: 150px;
 }
 .nav-link{
-  padding: 10px 9px;
+  padding: 10px 15px;
   transition: 0.2s ease-in-out;
 }
 .nav-link:hover{
   color: steelblue;
 }
-.brand, .nav-link{
+.nav-link{
   text-transform: uppercase;
   color: #303137;
+}
+a.nav-link{
+  font-size: 18px;
+  font-family: 'Montserrat', serif;
 }
 
 .dropdownLink{
@@ -150,7 +155,7 @@ header{
 }
 /* resume button */
 .resumeButton {
-  background: rgba(208, 214, 232, 0.8);
+  background: rgba(208, 214, 232, 0.9);
   border-radius: 16px;
   border: none;
   font-size: 1.1rem;
@@ -241,11 +246,19 @@ header{
   max-width: 250px;
 }
 .intro-header{
-  font-size: 24px;
-  margin-top: 0;
-  text-align: center;
-  padding-top: 1rem;
+    font-size: 32px;
+    font-weight: 350;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 0;
 }
+.intro-content{
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+
 @media (min-width: 768px) {
   .intro-content{
     display: flex;
@@ -255,12 +268,6 @@ header{
   padding-top: 0;
   }
 }
-.intro-content{
-  justify-content: space-between;
-  align-items: center;
-  padding: 2rem 1rem;
-}
-
 .introText-info{
   color: #646B90;
   font-size: 18px;
@@ -275,7 +282,7 @@ header{
   padding-left: 40px;
 }
 .edu-exp-header{
-    font-size: 28px;
+    font-size: 32px;
     font-weight: 350;
     letter-spacing: 3px;
     text-transform: uppercase;
@@ -365,38 +372,43 @@ header{
 }
 .interestContainer{
   display: flex;
+  flex-direction: column;
   padding: 50px 0;
 }
 .interestHeader{
   padding: 0 80px;
 }
 .int-info{
-    max-width: 100%;
-    font-weight: 300;
-    line-height: 1.8;
+  max-width: 100%;
+  font-weight: 300;
+  line-height: 1.8;
 }
 .int-header{
-      font-size: 28px;
-      font-weight: 350;
-      letter-spacing: 3px;
-      text-transform: uppercase;
+  font-size: 28px;
+  font-weight: 350;
+  letter-spacing: 3px;
+  text-transform: uppercase;
 }
 /* aboutMe section */
 .aboutMe{
   background: #fff;
+  padding: 1rem 0;
+}
+.styling-period{
+  font-size: 3rem;
+  color: #48d4d2;
 }
 .key{
   flex: 1;
   justify-content: center;
   text-align: center;
-  padding-bottom: 25px;
   border-radius: 10px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-  max-width: 250px;
+  max-width: 300px;
   transition: 0.5s ease-in-out;
 }
 .key:hover{
-  transform: scale(1.05);
+  transform:  scale(1.02);
 }
 
 .abt-buzzword{
@@ -410,7 +422,7 @@ header{
 }
 .abt-info{
   max-width: 70%;
-  margin: 0 auto;
+  margin: 1rem auto;
   font-weight: 300;
 }
 .abt-icon-wrapper{
@@ -421,7 +433,15 @@ header{
   max-width: 120px;
   width: 30%;
 }
-
+.abt-number{
+  color: rgb(56, 145, 225);
+  font-family:'Montserrat', sans-serif;
+  font-size: 60px;
+  position: relative;
+  top: .5rem;
+  left: 6.5rem;
+  text-shadow: 1px 1px 8px rgb(42, 193, 208);
+}
 /* portfolio */
 .portfolio-header{
   font-size: 28px;
@@ -436,14 +456,14 @@ header{
   padding: 50px 0;
 }
 .port-header-line{
-  width: 50vw;
+  width: 8vw;
 }
 .proj-obj{
   max-width: 200px;
   padding: 1rem;
 }
 .proj-obj-img img{
-  border: 2px solid rgba(176, 216, 242, 0.5);
+  border: 1px solid rgba(176, 216, 242, 0.5);
   border-radius: 5px;
   width: 200px;
   height: 200px;
@@ -489,9 +509,12 @@ header{
 
 
 /* MEDIA QUERY section */
-@media (max-width: 768px) {
+@media (max-width: 960px) {
   .navbar{
-    background: rgba(240, 248, 255, 1);
+    background: rgba(240, 248, 255, 0.8);
+  }
+  .span-nav{
+    display: none;
   }
   ul.top-nav{
     align-items: flex-end;
@@ -503,9 +526,8 @@ header{
   ul.top-nav li.dropdownLink{
     display: block;
     position: absolute;
-    top: 6px;
+    top: 12px;
     right: 20px;
-
   }
   ul.top-nav.responsive{
     flex-direction: column;
