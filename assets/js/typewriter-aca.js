@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded',function(event){
         if (typeof dataText[i] == 'undefined'){
             setTimeout(function() {
                 StartTextAnimation(0);
-            }, 10000); // lasting time for the last word
+            }, 6000); // lasting time for the last word
         }
        // check if dataText[i] exists
         if (dataText[i] != null && i < dataText[i].length) {
