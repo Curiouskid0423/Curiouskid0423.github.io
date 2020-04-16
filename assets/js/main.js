@@ -1,5 +1,36 @@
 
 //-------------------------------//
+
+window.onload = () => {
+	Particles.init({
+		selector: '.particle-bg',
+		maxParticles: 100,
+		color: '#585858',
+		responsive: [{
+			breakpoint: 1500,
+			options: {
+				connectParticles: true,
+				minDistance: 150,
+				speed: 1
+			}
+		},{
+			breakpoint: 900,
+			options: {
+				connectParticles: true,
+				minDistance: 100,
+				speed: .5
+			}
+		}, {
+			breakpoint: 425,
+			options: {
+				connectParticles: true,
+				minDistance: 60,
+				speed: .5
+			}
+		}]
+	});
+};
+
 (function($) {
 	
 	var	$window = $(window),

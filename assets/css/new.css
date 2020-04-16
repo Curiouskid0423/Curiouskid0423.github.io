@@ -94,3 +94,12 @@
 @keyframes come-in {
     to { transform: translateY(0); opacity: 1;}
 }
+
+.particle-bg {
+    position: fixed;
+    display: block;
+    opacity: 0.1;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
