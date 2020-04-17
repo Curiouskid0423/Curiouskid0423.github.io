@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded',function(event){
     
     const typeWriter = (text, i, fnCallback) => {
       if (i < (text.length)) {
-       document.querySelector(".my-name-change").innerHTML 
+       document.querySelector(".name-change").innerHTML 
            = text.substring(0, i+1) +'<span aria-hidden="true"></span>';
   
         setTimeout(function() {
