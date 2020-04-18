@@ -99,12 +99,8 @@
 .particle-bg {
     position: fixed;
     display: block;
-    opacity: 0.12;
+    opacity: 0.1;
     width: 100vw;
     height: 100vh;
     z-index: -1;
-}
-.avenir-font {
-    font-family: "Avenir", "Source Sans Pro", 
-                    Helvetica, sans-serif;
 }
