@@ -21,8 +21,9 @@
 }.proj-img:hover {
     transform: scale(1.05);
     filter: opacity(0.8);
-    -webkit-filter: opacity(0.8);
+    -webkit-filter: opacity(0.3);
 }
+
 @media (max-width: 768px) {
     .profile-section {
         flex-direction: column;
@@ -98,8 +99,12 @@
 .particle-bg {
     position: fixed;
     display: block;
-    opacity: 0.15;
+    opacity: 0.12;
     width: 100vw;
     height: 100vh;
     z-index: -1;
+}
+.avenir-font {
+    font-family: "Avenir", "Source Sans Pro", 
+                    Helvetica, sans-serif;
 }
