@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded',function(event){
         }, 100);
       }
       else if (typeof fnCallback == 'function') {
-        setTimeout(fnCallback, 700);
+        setTimeout(fnCallback, 900);
       }
     }
     const StartTextAnimation = (i) => {
