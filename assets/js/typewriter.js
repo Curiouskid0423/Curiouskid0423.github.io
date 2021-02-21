@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded',function(event){
-    var dataText = [ "Kevin.", "an engineer.", "a dreamer."];
+    var dataText = [ "Kevin.", "an imagineer."];
     
     const typeWriter = (text, i, fnCallback) => {
       if (i < (text.length)) {
@@ -11,14 +11,14 @@ document.addEventListener('DOMContentLoaded',function(event){
         }, 100);
       }
       else if (typeof fnCallback == 'function') {
-        setTimeout(fnCallback, 900);
+        setTimeout(fnCallback, 1300);
       }
     }
     const StartTextAnimation = (i) => {
         if (typeof dataText[i] == 'undefined'){
             setTimeout(function() {
                 StartTextAnimation(0);
-            }, 1000); // lasting time for the last word
+            }, 900); // lasting time for the last word
         }
        // check if dataText[i] exists
         if (dataText[i] != null && i < dataText[i].length) {
